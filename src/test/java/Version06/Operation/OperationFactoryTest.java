@@ -5,7 +5,9 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+import static jdk.internal.dynalink.support.Guards.isNull;
 import static org.hamcrest.CoreMatchers.instanceOf;
+import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
 public class OperationFactoryTest {
@@ -58,6 +60,20 @@ public class OperationFactoryTest {
         assertThat(operation,instanceOf(DivOperation.class));
 
     }
+
+    @Test
+    public void shouldReturnNull(){
+
+        OperationFactory operationFactory = new OperationFactory();
+        List<Double> inputNumbers = new ArrayList<>();
+        inputNumbers.add(10.0);
+        inputNumbers.add(20.0);
+        Operation operation = operationFactory.getInstance("mod",inputNumbers);
+        assertThat(operation,is(isNull()));
+
+    }
+
+
 
 
 }

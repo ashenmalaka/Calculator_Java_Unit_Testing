@@ -13,19 +13,10 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
-        Inputs inputs = new CMDLineInputs(args);
-        //first argument: add/sub/mul/div
-        String operation = inputs.read();
 
         NumberRepository numberRepository = new FileNumberRepository();
-        List<Double> inputNumbers = numberRepository.read();
+        CalculatorApp calculatorApp = new CalculatorApp(numberRepository, args);
+        calculatorApp.run();
 
-        OperationFactory operationFactory = new OperationFactory();
-        Operation operation1 = operationFactory.getInstance(operation, inputNumbers);
-
-        Outputs outputs = new ConsoleOutputs();
-        outputs.show("The result is :  " + operation1.perform());
-        outputs.show("Exiting the program...!!!");
     }
 }
