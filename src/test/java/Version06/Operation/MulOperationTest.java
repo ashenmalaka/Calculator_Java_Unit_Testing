@@ -25,7 +25,7 @@ public class MulOperationTest {
     public void mulNegativeToZeroTest() {
         Operation operation = new MulOperation(-2, 0);
         double result = operation.perform();
-        assertThat(result, is(0.0));
+        assertThat(result, is(0.0)) ;
     }
 
     @Test

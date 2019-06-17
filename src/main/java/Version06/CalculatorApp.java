@@ -2,7 +2,6 @@ package Version06;
 
 import Version06.Inputs.CMDLineInputs;
 import Version06.Inputs.Inputs;
-import Version06.NumberRepository.FileNumberRepository;
 import Version06.NumberRepository.NumberRepository;
 import Version06.Operation.Operation;
 import Version06.Operation.OperationFactory;
