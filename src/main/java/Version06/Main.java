@@ -1,14 +1,8 @@
 package Version06;
 
-import Version06.Inputs.CMDLineInputs;
-import Version06.Inputs.Inputs;
 import Version06.NumberRepository.FileNumberRepository;
 import Version06.NumberRepository.NumberRepository;
 import Version06.Operation.*;
-import Version06.Outputs.ConsoleOutputs;
-import Version06.Outputs.Outputs;
-
-import java.util.List;
 
 public class Main {
 
