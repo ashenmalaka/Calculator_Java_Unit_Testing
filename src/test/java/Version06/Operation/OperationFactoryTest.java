@@ -23,4 +23,41 @@ public class OperationFactoryTest {
 
     }
 
+    @Test
+    public void shouldReturnSubOperation(){
+
+        OperationFactory operationFactory = new OperationFactory();
+        List<Double> inputNumbers = new ArrayList<>();
+        inputNumbers.add(10.0);
+        inputNumbers.add(20.0);
+        Operation operation = operationFactory.getInstance("sub",inputNumbers);
+        assertThat(operation,instanceOf(SubOperation.class));
+
+    }
+
+    @Test
+    public void shouldReturnMulOperation(){
+
+        OperationFactory operationFactory = new OperationFactory();
+        List<Double> inputNumbers = new ArrayList<>();
+        inputNumbers.add(10.0);
+        inputNumbers.add(20.0);
+        Operation operation = operationFactory.getInstance("mul",inputNumbers);
+        assertThat(operation,instanceOf(MulOperation.class));
+
+    }
+
+    @Test
+    public void shouldReturnDivOperation(){
+
+        OperationFactory operationFactory = new OperationFactory();
+        List<Double> inputNumbers = new ArrayList<>();
+        inputNumbers.add(10.0);
+        inputNumbers.add(20.0);
+        Operation operation = operationFactory.getInstance("div",inputNumbers);
+        assertThat(operation,instanceOf(DivOperation.class));
+
+    }
+
+
 }
